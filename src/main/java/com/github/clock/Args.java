@@ -22,7 +22,13 @@ public class Args {
 
     @Option(name="-d", aliases="--debug", usage="debug mode.")
     private boolean debugMode = false;
+    
+    public String getLongHandColor(){
+	return longHandColor;
+    }
 
+    @Option(name="-lc",aliases="--long-hand-color",usage="長針の色を指定")
+	private String longHandColor="#ff0000";
     public boolean isRunningMode(){
         return !isShowVersion() && !isShowHelp();
     }
